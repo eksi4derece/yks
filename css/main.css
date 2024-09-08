@@ -1,0 +1,149 @@
+:root {
+    --primary-color: dodgerBlue;
+    --secondary-color: #222;
+    --background-color: black;
+    --text-color: white;
+	--header-height: 4em;
+    --priClr: var(--primary-color);
+    --secClr: var(--secondary-color);
+    --bgClr: var(--background-color);
+    --txtClr: var(--text-color);
+	--hdrHeight: var(--header-height);
+	color: var(--text-color);
+    font-family: monospace;
+}
+
+input[type="checkbox"] {
+	opacity: 0;
+}
+
+.navigation {
+	position: sticky;
+	top: 0.2em;
+	padding: 1em;
+	z-index: 100;
+	overflow: hidden;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 1em;
+	overflow: hidden;
+}
+
+.navigation *{
+	text-align: center;
+}
+
+
+.checkbox {
+	display: block;
+}
+
+.item  {
+	all: unset;
+	display: block;
+	position: relative;
+	float: right;
+	background-color: var(--secClr);
+	border: .15em solid var(--priClr);
+	border-radius: .5em;
+	box-sizing: border-box;
+	transition: 100ms;
+	font-size: 1.25em;
+	padding: .5em;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+button.item:focus, button.item:hover, a.item:focus, a.item:hover, .checkbox:has(input[type="checkbox"]:focus){
+	outline: .1em solid var(--priClr);
+	outline-offset: .15em;
+}
+
+.checkbox:has(input[type="checkbox"]:checked), button.item:active {
+	color: var(--priClr);
+	text-shadow: 0 0 .5em var(--priClr);
+}
+
+.centered-container {
+    min-height: calc(100dvh - 4em);
+	translate: -50%;
+	position: relative;
+	left: 50%;
+	padding: 2em 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+
+.grid-container {
+    display: grid;
+	padding: 7.5em;
+	grid-template-columns: max-content max-content max-content;
+    justify-content: center;
+	align-content: center;
+    gap: 1em;
+}
+
+.grid-container .item, .centered-container .item{
+	width: 15em;
+}
+
+.control-panel {
+    display: inline-grid;
+    grid-template-columns: 6em ;
+    box-sizing: border-box;
+    row-gap: .5em;
+    column-gap: .5em;
+    text-align: center;
+    width: 100%;
+}
+
+.control-panel .item {
+	width: unset;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	background: var(--secClr);
+	width: 1em;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--secClr);
+	border: .1em solid var(--priClr);
+}
+
+
+
+@media screen and (max-width: 768px) {
+	.grid-container {
+		grid-template-columns: max-content;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.grid-container {
+		grid-template-columns: max-content max-content;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.grid-container {
+		grid-template-columns: max-content max-content max-content;
+	}
+}

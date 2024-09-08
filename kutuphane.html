@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Kütüphane</title>
+</head>
+<body>
+    <canvas id="omega" style="position: fixed; top:0 ; left:0; z-index:-100;"></canvas>
+    <div id="kitaplik" class="grid-container"></div>
+    <div id="goruntuleyici" style="display: none;">
+        <div id="ustmenu" class="navigation">
+            <button id="kapat" class="item" onclick="kapat()">Kapat</button>
+            <span id="bilgi" class="item"></span>
+            <a class="item" id="pdf" href="">PDF</a>
+        </div>
+        <div id="sayfalar" class="centered-container" style="width: 95%;"></div>
+    </div>
+    
+	<script src="./js/omega.js"></script>
+	<script src="./js/kutuphane.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/eges.css">
+	<title>EGES</title>
+</head>
+
+<body>
+	<div id="topics" class="centered-container">
+		<button class="item" id="start-button" onclick="start()">Start</button>
+	</div>
+	<div id="questions">
+		<div id="title"></div>
+		<div id="definition"></div>
+		<div id="control-panel" class="control-panel">
+			<div class="item" id="counter"></div>
+			<input class="item" name="wordinput" id="wordinput" type="text" autocomplete="off" spellcheck="false"
+				autocorrect="off" onkeydown="if(event.key == 'Enter') check()">
+			<button class="item" id="skip" onclick="skipf()">Skip</button>
+			<button class="item" id="next" onclick="ask()">Next</button>
+			<button class="item" id="check" onclick="check()">Check</button>
+			<button class="item" id="cancel" onclick="end()">Cancel</button>
+		</div>
+	</div>
+	<canvas id="omega" style="position: fixed; top:0 ; left:0; z-index:-100;"></canvas>
+	<script src="./js/omega.js"></script>
+	<script src="./js/eges.js"></script>
+</body>
+
+</html>
